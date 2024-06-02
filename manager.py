@@ -18,6 +18,14 @@ class Manager(Tk):
         self.optionTables = Menu(self.menuBar, tearoff=0)
         self.menuBar.add_cascade(label="Tables", menu=self.optionTables)
 
+        self.optionTables.add_command(label="Regions")
+        self.optionTables.add_command(label="Countries")
+        self.optionTables.add_command(label="LCs")
+        self.optionTables.add_separator()
+        self.optionTables.add_command(label="Franchises")
+        self.optionTables.add_separator()
+        self.optionTables.add_command(label="Exit", command=self.quit)
+
         self.optionData = Menu(self.menuBar, tearoff=0)
         self.menuBar.add_cascade(label="Data", menu=self.optionData)
 
