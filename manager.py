@@ -29,6 +29,11 @@ class Manager(Tk):
         self.optionData = Menu(self.menuBar, tearoff=0)
         self.menuBar.add_cascade(label="Data", menu=self.optionData)
 
+        self.optionData.add_command(label="Main")
+        self.optionData.add_command(label="Marketing")
+        self.optionData.add_separator()
+        self.optionData.add_command(label="Exchange Rates")
+
         self.optionViews = Menu(self.menuBar, tearoff=0)
         self.menuBar.add_cascade(label="Views", menu=self.optionViews)
 
