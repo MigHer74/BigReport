@@ -1,4 +1,4 @@
-from tkinter import Toplevel, LabelFrame, Frame, Label, Entry
+from tkinter import Toplevel, LabelFrame, Frame, Label, Entry, Button
 
 
 class BigRegions(Toplevel):
@@ -30,3 +30,16 @@ class BigRegions(Toplevel):
 
         self.nameEntry = Entry(self.headerFrame, width=25)
         self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
+
+        self.buttonsFrame = Frame(self.regionsFrame)
+        self.buttonsFrame.grid(row=0, column=1)
+
+        self.buttonSave = Button(self.buttonsFrame, text="Save", width=15)
+        self.buttonSave.grid(row=0, column=0)
+
+        self.buttonDelete = Button(self.buttonsFrame, text="Delete", width=15)
+        self.buttonDelete.grid(row=1, column=0)
+
+        self.buttonClose = Button(self.buttonsFrame, text="Close", width=15,
+                                  command=self.destroy)
+        self.buttonClose.grid(row=2, column=0)
