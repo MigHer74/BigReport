@@ -32,14 +32,14 @@ class BigRegions(Toplevel):
         self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
 
         self.buttonsFrame = Frame(self.regionsFrame)
-        self.buttonsFrame.grid(row=0, column=1)
+        self.buttonsFrame.grid(row=0, column=1, padx=10, pady=10)
 
         self.buttonSave = Button(self.buttonsFrame, text="Save", width=15)
-        self.buttonSave.grid(row=0, column=0)
+        self.buttonSave.grid(row=0, column=0, pady=10)
 
         self.buttonDelete = Button(self.buttonsFrame, text="Delete", width=15)
         self.buttonDelete.grid(row=1, column=0)
 
         self.buttonClose = Button(self.buttonsFrame, text="Close", width=15,
                                   command=self.destroy)
-        self.buttonClose.grid(row=2, column=0)
+        self.buttonClose.grid(row=2, column=0, pady=10)
