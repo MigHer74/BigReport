@@ -47,7 +47,7 @@ class BigRegions(Toplevel):
         self.treeRegions.grid(row=0, column=0)
 
         self.buttonsFrame = Frame(self.regionsFrame)
-        self.buttonsFrame.grid(row=0, column=1, padx=10, pady=10)
+        self.buttonsFrame.grid(row=0, column=1, rowspan=2, padx=10, pady=10)
 
         self.buttonSave = Button(self.buttonsFrame, text="Save", width=15)
         self.buttonSave.grid(row=0, column=0, pady=10)
