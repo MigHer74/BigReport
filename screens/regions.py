@@ -17,16 +17,16 @@ class BigRegions(Toplevel):
         self.regionsFrame.pack()
 
         self.headerFrame = LabelFrame(self.regionsFrame)
-        self.headerFrame.grid(row=0, column=0)
+        self.headerFrame.grid(row=0, column=0, padx=10, pady=10)
 
         self.idLabel = Label(self.headerFrame, text="Id:")
-        self.idLabel.grid(row=0, column=0)
+        self.idLabel.grid(row=0, column=0, padx=(10, 5), pady=10)
 
         self.idEntry = Entry(self.headerFrame, width=5)
-        self.idEntry.grid(row=0, column=1)
+        self.idEntry.grid(row=0, column=1, padx=(0, 10), pady=10)
 
         self.nameLabel = Label(self.headerFrame, text="Name:")
-        self.nameLabel.grid(row=0, column=2)
+        self.nameLabel.grid(row=0, column=2, padx=(10, 5), pady=10)
 
         self.nameEntry = Entry(self.headerFrame, width=25)
-        self.nameEntry.grid(row=0, column=3)
+        self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
