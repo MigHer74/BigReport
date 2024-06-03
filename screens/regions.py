@@ -1,4 +1,4 @@
-from tkinter import Toplevel, LabelFrame, Frame, Label, Entry, Button
+from tkinter import ttk, Toplevel, LabelFrame, Frame, Label, Entry, Button
 
 
 class BigRegions(Toplevel):
@@ -30,6 +30,21 @@ class BigRegions(Toplevel):
 
         self.nameEntry = Entry(self.headerFrame, width=25)
         self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
+
+        self.treeFrame = LabelFrame(self.regionsFrame)
+        self.treeFrame.grid(row=1, column=0)
+
+        self.treeRegions = ttk.Treeview(self.treeFrame, columns=(1, 2),
+                                        show="headings", height=15,
+                                        selectmode="browse")
+
+        self.treeRegions.heading(1, text="Id")
+        self.treeRegions.heading(2, text="Region Name")
+
+        self.treeRegions.column(1, width=80, anchor="center")
+        self.treeRegions.column(2, width=200)
+
+        self.treeRegions.grid(row=0, column=0)
 
         self.buttonsFrame = Frame(self.regionsFrame)
         self.buttonsFrame.grid(row=0, column=1, padx=10, pady=10)
