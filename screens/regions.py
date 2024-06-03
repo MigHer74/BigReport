@@ -4,6 +4,9 @@ from tkinter import Toplevel, LabelFrame, Frame, Label, Entry
 class BigRegions(Toplevel):
     def __init__(self, parent):
         super().__init__()
+        self.transient(parent)
+        self.grab_set()
+        self.focus()
         self.build()
 
     def build(self):
