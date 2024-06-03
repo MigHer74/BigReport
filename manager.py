@@ -1,4 +1,5 @@
 from tkinter import Tk, Menu
+from screens.regions import BigRegions
 
 
 class Manager(Tk):
@@ -18,7 +19,8 @@ class Manager(Tk):
         self.optionTables = Menu(self.menuBar, tearoff=0)
         self.menuBar.add_cascade(label="Tables", menu=self.optionTables)
 
-        self.optionTables.add_command(label="Regions")
+        self.optionTables.add_command(label="Regions",
+                                      command=lambda: BigRegions(self))
         self.optionTables.add_command(label="Countries")
         self.optionTables.add_command(label="LCs")
         self.optionTables.add_separator()
