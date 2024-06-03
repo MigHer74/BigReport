@@ -1,4 +1,4 @@
-from tkinter import Tk, Toplevel, Frame
+from tkinter import Toplevel, Frame
 
 
 class BigRegions(Toplevel):
