@@ -9,7 +9,7 @@
 | File         | Description                                       |
 |:------------:|:-------------------------------------------------:|
 | main.py      |                                                   |
-| manager.py   |                                                   |
+| manager.py   | Main window and main menu of the app.             |
 | regions.py   | Screen Regions - Design and functionality.        |
 | countries.py | Screen Countries - Design and functionality.      |
 | readme.md    | Project description and documentation.            |
