@@ -10,7 +10,7 @@ class BigCountries(Toplevel):
         self.build()
 
     def build(self):
-        self.title("Big Report - Contries")
+        self.title("Big Report - Countries")
         self.resizable(False, False)
 
         self.countriesFrame = Frame(self)
@@ -31,6 +31,15 @@ class BigCountries(Toplevel):
         self.nameEntry = Entry(self.headerFrame, width=25)
         self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
 
+        self.regionLabel = Label(self.headerFrame, text="Region:")
+        self.regionLabel.grid(row=0, column=4, padx=(10, 5), pady=10)
+
+        self.regionCombobox = ttk.Combobox(self.headerFrame,
+                                           width=5,
+                                           values=["NA", "CA", "SA"],
+                                           state="readonly")
+        self.regionCombobox.grid(row=0, column=5, padx=(0, 10), pady=10)
+
         self.treeFrame = LabelFrame(self.countriesFrame)
         self.treeFrame.grid(row=1, column=0, padx=10, pady=10)
 
@@ -42,9 +51,9 @@ class BigCountries(Toplevel):
         self.treecountries.heading(2, text="Country Name")
         self.treecountries.heading(3, text="Region")
 
-        self.treecountries.column(1, width=75, anchor="center")
-        self.treecountries.column(2, width=200)
-        self.treecountries.column(3, width=75, anchor="center")
+        self.treecountries.column(1, width=80, anchor="center")
+        self.treecountries.column(2, width=250)
+        self.treecountries.column(3, width=80, anchor="center")
 
         self.treecountries.grid(row=0, column=0, padx=10, pady=10)
 
