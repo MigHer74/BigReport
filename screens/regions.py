@@ -32,7 +32,7 @@ class BigRegions(Toplevel):
         self.nameEntry.grid(row=0, column=3, padx=(0, 10), pady=10)
 
         self.treeFrame = LabelFrame(self.regionsFrame)
-        self.treeFrame.grid(row=1, column=0)
+        self.treeFrame.grid(row=1, column=0, padx=10, pady=10)
 
         self.treeRegions = ttk.Treeview(self.treeFrame, columns=(1, 2),
                                         show="headings", height=15,
@@ -41,20 +41,20 @@ class BigRegions(Toplevel):
         self.treeRegions.heading(1, text="Id")
         self.treeRegions.heading(2, text="Region Name")
 
-        self.treeRegions.column(1, width=80, anchor="center")
+        self.treeRegions.column(1, width=75, anchor="center")
         self.treeRegions.column(2, width=200)
 
-        self.treeRegions.grid(row=0, column=0)
+        self.treeRegions.grid(row=0, column=0, padx=10, pady=10)
 
         self.buttonsFrame = Frame(self.regionsFrame)
         self.buttonsFrame.grid(row=0, column=1, rowspan=2, padx=10, pady=10)
 
-        self.buttonSave = Button(self.buttonsFrame, text="Save", width=15)
+        self.buttonSave = Button(self.buttonsFrame, text="Save", width=10)
         self.buttonSave.grid(row=0, column=0, pady=10)
 
-        self.buttonDelete = Button(self.buttonsFrame, text="Delete", width=15)
+        self.buttonDelete = Button(self.buttonsFrame, text="Delete", width=10)
         self.buttonDelete.grid(row=1, column=0)
 
-        self.buttonClose = Button(self.buttonsFrame, text="Close", width=15,
+        self.buttonClose = Button(self.buttonsFrame, text="Close", width=10,
                                   command=self.destroy)
-        self.buttonClose.grid(row=2, column=0, pady=10)
+        self.buttonClose.grid(row=2, column=0, pady=(20, 0))
