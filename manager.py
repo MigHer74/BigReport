@@ -24,9 +24,9 @@ class Manager(Tk):
                                       command=lambda: BigRegions(self))
         self.optionTables.add_command(label="Countries",
                                       command=lambda: BigCountries(self))
-        self.optionTables.add_command(label="LCs")
         self.optionTables.add_separator()
         self.optionTables.add_command(label="Franchises")
+        self.optionTables.add_command(label="LCs")
         self.optionTables.add_separator()
         self.optionTables.add_command(label="Exit", command=self.quit)
 
